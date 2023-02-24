@@ -10,7 +10,7 @@ $template = $twig->load('teste.html');
 echo $template->render([
     'nome' => 'amanda',
     'idade' => 17,
-    'titulo' => 'vsf agusto',
+    'titulo' => 'vsf agusto'
 ]);
 
 ?>
