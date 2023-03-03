@@ -4,6 +4,10 @@ $pass = $_POST['pass'];
 
 if ($user == 'amanda' && $pass == '123') {
     // login com sucesso
+
+    session_start();
+    $_SESSION['user'] = 'amanda';
+
     header ('location: boasvindas.php');
     die;
 } else {
