@@ -1,4 +1,9 @@
 <?php
 
-$conex = new POD('mysql:host=localhost;
-dbname=sistematwig', 'root' , ' ');
+$pdo = new PDO('mysql:host=localhost;
+dbname=sistematwig', 'root' , '');
+
+
+# $usuarios = $conex->query('SELECT * FROM usuario');
+#while ($usuario = $usuarios->fetch(PDO::FETCH_OBJ)){
+#    var_dump($usuario);}
