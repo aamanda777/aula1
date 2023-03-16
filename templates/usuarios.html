@@ -8,8 +8,10 @@
 		<title>Document</title>
 	</head>
 	<body>
-	<h1>Usuários</h1>
-	<h3> listagem de usuários </h3>
+		<h1>Usuários</h1>
+		<h3>
+			listagem de usuários
+		</h3>
 		<table border="1">
 			<tr>
 				<th>usuário</th>
@@ -20,18 +22,22 @@
 
 				<tr>
 					<td>{{usr.username}}</td>
-                    <td>{{usr.admin}}</td>
-                    <td>{{usr.ativo}}</td>
-                    <td><a href="usuario_apagar.php?id={{usr.id}}">Apagar</a></td>
+					<td>{{usr.admin}}</td>
+					<td>{{usr.ativo}}</td>
+					<td>
+						<a href="usuario_apagar.php?id={{usr.id}}">Apagar</a>
+					</td>
 				</tr>
 
 			{% else %}
-            <tr>
-            <td colspan="2">Nenhum usuário</td>
-            </tr>
+				<tr>
+					<td colspan="2">Nenhum usuário</td>
+				</tr>
 			{% endfor %}
 		</table>
-			<button><a href="novo_usuario.php">adicionar novo usuário</a></button>
+		<button>
+			<a href="novo_usuario.php">adicionar novo usuário</a>
+		</button>
 
 		{% include "inc/foot.html"%}</body>
-
+</html>
