@@ -15,7 +15,7 @@ if (!$user || !$pass || !$nome || !$email) {
 
 $pass = password_hash($pass , PASSWORD_BCRYPT);
 
-$sql = $pdo->prepare('INSERT INTO usuario(username , senha , nome , email , admin) values (:user , :pass , :nome , :email , :admin)');
+$sql = $pdo->prepare('INSERT INTO usuario(username , senha , nome , email , admin , ativo) values (:user , :pass , :nome , :email , :admin , 1)');
 
 $sql->bindParam(':user' , $user);
 $sql->bindParam(':pass' , $pass);

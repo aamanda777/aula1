@@ -1,0 +1,37 @@
+{% include "inc/header.html"%}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+	</head>
+	<body>
+	<h1>Usuários</h1>
+	<h3> listagem de usuários </h3>
+		<table border="1">
+			<tr>
+				<th>usuário</th>
+				<th>admin</th>
+				<th>ativo</th>
+			</tr>
+			{% for usr in usuario %}
+
+				<tr>
+					<td>{{usr.username}}</td>
+                    <td>{{usr.admin}}</td>
+                    <td>{{usr.ativo}}</td>
+                    <td><a href="usuario_apagar.php?id={{usr.id}}">Apagar</a></td>
+				</tr>
+
+			{% else %}
+            <tr>
+            <td colspan="2">Nenhum usuário</td>
+            </tr>
+			{% endfor %}
+		</table>
+			<button><a href="novo_usuario.php">adicionar novo usuário</a></button>
+
+		{% include "inc/foot.html"%}</body>
+
