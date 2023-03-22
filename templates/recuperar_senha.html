@@ -1,0 +1,16 @@
+{% if msg %}
+	<span>
+		<div class="texto" style="color:red; font-size:xx-large;">
+			<marquee>{{msg}}</marquee>
+		</div>
+	</span>
+{% endif %}
+
+<form action="recuperar_senha.php" method="POST">
+	<div>
+		<input type="text" name="username" placeholder="digite seu usuárie">
+	</div>
+	<div>
+		<input type="submit" value="manda ver">
+	</div>
+</form>

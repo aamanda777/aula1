@@ -1,18 +1,24 @@
-{% if erro == 1%}  
-usuário ou senha inválidos 😂😑
-{% elseif erro == 2 %} 
-você está tentando acessar uma página restrita, safadinho 😈🔥🔞
+{% if erro == 1%}
+	usuário ou senha inválidos 😂😑
+{% elseif erro == 2 %}
+	você está tentando acessar uma página restrita, safadinho 😈🔥🔞
 {% endif %}
 
 
 <form action="login_verifica.php" method="POST">
-    <div>
-    <input type="text" name="user" placeholder="usuario">
-    </div>
-    <div>
-    <input type="password" name="pass" placeholder="senha">
-    </div>
-    <div>
-    <input type="submit" value="acessar">
-    </div>
+	<div>
+		<input type="text" name="user" placeholder="usuario">
+	</div>
+	<div>
+		<input type="password" name="pass" placeholder="senha">
+	</div>
+	<div>
+		<input type="submit" value="acessar">
+	</div>
 </form>
+
+<div>
+	<a href="recuperar_senha.php">
+		esqueci minha senha 😣
+	</a>
+</div>
