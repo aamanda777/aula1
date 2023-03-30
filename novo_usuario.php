@@ -14,7 +14,8 @@
                 <div><input type="email" name="email" placeholder="email"></div>
 
                 <div><input type="checkbox" name="admin" checked>
-                <label for="admin">administrador</label></div>
+                    <label for="admin">administrador</label>
+                </div>
 
                 <div><input type="submit" value="gravar"></div>
 
