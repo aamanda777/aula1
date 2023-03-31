@@ -9,10 +9,8 @@ require('models/Usuario.php');
 $id = $_GET['id'] ?? false;
 
 $usr = new Usuario();
-$usuarios = $usr->getAll();
+$info = $usr->getById($id);
+var_dump($info);
+die;
 
-echo $twig->render('usuarios.html', [
-    'usuario' => $usuarios,
-]);
-
-?>
+echo $twig->render('usuario_ver.html');

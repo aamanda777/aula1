@@ -8,13 +8,13 @@ require 'pdo.inc.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //modifica o user para ativo
     $id = $_POST['id'] ?? false;
-    if ($id){
+    if ($id) {
         $sql = $pdo->prepare('UPDATE usuario SET ativo = 0 WHERE id = ?');
         $sql->execute([$id]);
     }
     header('location:usuario.php');
     die;
-die;
+    die;
 }
 
 // rotina de GET - mostrar informações na tela

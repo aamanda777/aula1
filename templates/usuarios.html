@@ -21,7 +21,7 @@
 			{% for usr in usuario %}
 
 				<tr>
-					<td>{{usr.username}}</td>
+					<td><a href="usuario_ver.php?id={{usr.id}}">{{usr.username}}</a></td>
 					<td>{{usr.admin}}</td>
 					<td>{{usr.ativo}}</td>
 					<td>

@@ -16,12 +16,14 @@ $produtos = [
         'nome' => 'camiseta',
         'preço' => 50,
     ],
-    [   'nome' => 'boné',
+    [
+        'nome' => 'boné',
         'preço' => 39.90,
     ],
-    [   'nome' => 'automóvel',
+    [
+        'nome' => 'automóvel',
         'preço' => 12000,
-],
+    ],
 ];
 
 echo $template->render([
