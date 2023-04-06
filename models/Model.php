@@ -35,7 +35,25 @@ class Model
         $sql = $this->conex->prepare("SELECT * FROM {$this->table} WHERE id = :id");
         $sql->bindParam(':id', $id);
         $sql->execute();
-        $user = $sql->fetch(PDO::FETCH_ASSOC);
-        return $user;
+        return $sql->fetch(PDO::FETCH_ASSOC);
+    }
+    public function create($data)
+    {
+
+        $sql = "INSERT INTO {$this->table}";
+        //prepara os campos e placeholders
+        foreach (array_keys($data) as $field) {
+            $sql_fields[] = "{$field} = :{$field}";
+        }
+
+        $sql_fields = implode(',', $sql_fields);
+        //monta a consulta
+        $sql .= " SET {$sql_fields}";
+
+        $insert = $this->conex->prepare($sql);
+
+
+        $insert->execute($data);
+        return $insert->errorInfo();
     }
 }
