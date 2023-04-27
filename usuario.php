@@ -9,7 +9,7 @@ require('models/Usuario.php');
 $id = $_GET['id'] ?? false;
 
 $usr = new Usuario();
-$usuarios = $usr->getAll();
+$usuarios = $usr->getAll(['ativo' => 1]);
 
 echo $twig->render('usuarios.html', [
     'usuario' => $usuarios,

@@ -22,5 +22,5 @@ $usr->update([
     'username'=>$username,
 
 ], $id);
-header('location:usuario.php');
+header('location:/usuario');
 die;
